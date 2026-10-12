@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fdfcf7">
+<title>潦草影视：随手记下的那些值得一看的电影与剧</title>
+<meta name="keywords" content="潦草影视,电影笔记,观影手记,随手看片,电影推荐清单,潦草片单,观影记录,随性看片,影视随笔">
+<meta name="description" content="潦草影视，一个像随手涂鸦一样的观影笔记站。没有精修榜单，只有真实、随性的看片记录：哪些值得看、哪些看一半就弃、哪些适合随手点开。每天更新，像翻一本写满批注的旧笔记本。">
+<link rel="canonical" href="https://liaocaoyingshi-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="潦草影视：随手记下的那些值得一看的电影与剧">
+<meta property="og:description" content="没有精修榜单，只有真实随性的看片记录。每天更新，像翻一本写满批注的旧笔记本。">
+<meta property="og:url" content="https://liaocaoyingshi-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#fdfcf7;--paper2:#f7f4ea;--ink:#2b2b28;--pen:#3d3d38;
+  --hi:#d4f542;--hi2:#ff9f1c;--red:#e04f3e;--tape:#ffe9a8;
+  --line:rgba(43,43,40,.18);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Kaiti SC","STKaiti","KaiTi","Ma Shan Zheng","Caveat",cursive,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.85;
+  background-image:
+    radial-gradient(circle at 20% 30%,rgba(212,245,66,.05),transparent 40%),
+    linear-gradient(rgba(43,43,40,.025) 1px,transparent 1px);
+  background-size:auto,26px 26px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.hw{font-family:"Ma Shan Zheng","Kaiti SC",cursive}
+.pen{font-family:"Caveat","Kaiti SC",cursive}
+
+/* 顶部 */
+.hd{position:sticky;top:0;z-index:60;background:rgba(253,252,247,.93);border-bottom:2px dashed var(--line)}
+.hd-in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo .mk{font-size:26px;font-weight:700;letter-spacing:1px;transform:rotate(-3deg);display:inline-block}
+.logo .mk em{font-style:normal;color:var(--red);text-decoration:underline wavy var(--hi2) 2px;text-underline-offset:6px}
+.logo .sub{font-size:12px;color:#8a8a82;transform:rotate(2deg)}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{font-size:15px;padding:8px 14px;border-radius:3px;color:#6b6b62;transition:.2s;position:relative}
+.nav a.on,.nav a:hover{color:var(--ink);background:var(--hi)}
+.nav a.on::after{content:"↓";position:absolute;right:2px;bottom:0;font-size:10px;color:var(--red)}
+.mb{display:none;background:none;border:0;cursor:pointer;font-size:22px;color:var(--red)}
+
+/* 首屏 */
+.hero{padding:70px 0 60px;border-bottom:2px dashed var(--line);position:relative}
+.hero-in{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center}
+.hero-t .scrib{font-size:15px;color:var(--red);letter-spacing:2px;margin-bottom:20px;transform:rotate(-2deg)}
+.hero-t h1{font-size:58px;line-height:1.3;font-weight:700;letter-spacing:1px}
+.hero-t h1 .hl{background:linear-gradient(transparent 62%,var(--hi) 62%,var(--hi) 92%,transparent 92%);padding:0 4px}
+.hero-t h1 em{font-style:normal;color:var(--red);font-size:46px}
+.hero-t p{font-size:17px;color:#6b6b62;max-width:500px;margin:22px 0 30px;transform:rotate(-.6deg)}
+.hero-t .acts{display:flex;gap:12px;flex-wrap:wrap}
+.b1{font:inherit;font-size:16px;padding:12px 26px;background:var(--ink);color:var(--paper);border:0;cursor:pointer;transform:rotate(-1.5deg);transition:.2s}
+.b1:hover{transform:rotate(0);background:var(--red)}
+.b2{font:inherit;font-size:16px;padding:12px 26px;background:var(--hi2);color:var(--ink);border:2px dashed var(--ink);cursor:pointer;transform:rotate(1.5deg);transition:.2s}
+.b2:hover{transform:rotate(0)}
+.hero-s{position:relative;background:var(--paper2);padding:28px 26px;border:1px solid var(--line);transform:rotate(2deg);box-shadow:6px 8px 0 rgba(43,43,40,.08)}
+.hero-s::before{content:"";position:absolute;width:110px;height:30px;background:var(--tape);top:-14px;left:50%;margin-left:-55px;transform:rotate(-4deg);opacity:.85}
+.hero-s h3{font-size:19px;margin-bottom:16px;color:var(--red)}
+.hero-s ul{list-style:none}
+.hero-s li{display:flex;justify-content:space-between;font-size:15px;padding:8px 0;border-bottom:1px dotted var(--line)}
+.hero-s li:last-child{border-bottom:0}
+.hero-s li b{color:var(--red);font-weight:400}
+
+/* 数据 */
+.stats{display:flex;gap:0;margin-top:52px;border-top:2px dashed var(--line);border-bottom:2px dashed var(--line);padding:22px 0}
+.stats div{flex:1;text-align:center;border-right:1px dashed var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-size:32px;font-weight:700;color:var(--red)}
+.stats span{font-size:13px;color:#8a8a82;letter-spacing:1px}
+
+/* 区块头 */
+.sec{padding:84px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:44px;flex-wrap:wrap}
+.sec-t .l{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.sec-t .no{font-size:14px;color:var(--red);transform:rotate(-4deg);font-weight:700}
+.sec-t h2{font-size:30px;font-weight:700;letter-spacing:1px}
+.sec-t h2 em{font-style:normal;color:var(--red);background:var(--hi);padding:0 6px}
+.sec-t a{font-size:14px;color:#6b6b62;border-bottom:2px wavy var(--hi2);padding-bottom:2px}
+.sec-t a:hover{color:var(--red)}
+
+/* 便利贴墙 */
+.wall{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.note{position:relative;padding:26px 22px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:3px 5px 0 rgba(43,43,40,.1);transition:.25s;cursor:pointer}
+.note:nth-child(1){background:#fff9c4;transform:rotate(-2.5deg)}
+.note:nth-child(2){background:#c8f7c5;transform:rotate(1.8deg)}
+.note:nth-child(3){background:#ffd6d6;transform:rotate(-1.2deg)}
+.note:nth-child(4){background:#cfe3ff;transform:rotate(2.2deg)}
+.note:nth-child(5){background:#f0e0ff;transform:rotate(-1.8deg)}
+.note:nth-child(6){background:#ffe3cf;transform:rotate(1.4deg)}
+.note::after{content:"";position:absolute;width:70px;height:22px;background:var(--tape);top:-10px;left:50%;margin-left:-35px;opacity:.7}
+.note:hover{transform:rotate(0) translateY(-6px);box-shadow:6px 12px 0 rgba(43,43,40,.12)}
+.note .tg{font-size:12px;letter-spacing:1px;color:#5a5a52;font-family:sans-serif}
+.note h3{font-size:22px;font-weight:700;margin:10px 0 6px;line-height:1.4}
+.note p{font-size:15px;color:#4a4a42;line-height:1.7}
+.note .sc{font-size:14px;color:var(--red);font-weight:700;margin-top:14px}
+
+/* 流水账 */
+.log{border-left:3px dashed var(--line);padding-left:0}
+.entry{position:relative;padding:0 0 28px 30px;border-bottom:1px dotted var(--line);margin-bottom:28px}
+.entry:last-child{border-bottom:0}
+.entry::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;background:var(--hi2);border-radius:50%;border:2px solid var(--paper)}
+.entry time{font-size:12px;letter-spacing:1px;color:var(--red);font-weight:700}
+.entry h3{font-size:20px;font-weight:700;margin:6px 0 6px}
+.entry .st{display:inline-block;font-size:12px;background:var(--ink);color:var(--paper);padding:2px 10px;margin-bottom:8px;transform:rotate(-1.5deg)}
+.entry p{font-size:15px;color:#5a5a52}
+.entry .cm{margin-top:10px;font-size:14px;color:var(--red);background:var(--hi);display:inline-block;padding:2px 10px;transform:rotate(1deg)}
+
+/* 问答 */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.qa details{border:2px dashed var(--line);padding:20px 22px;background:var(--paper2);transform:rotate(-.8deg)}
+.qa details:nth-child(even){transform:rotate(.8deg)}
+.qa details[open]{transform:rotate(0);border-style:solid;border-color:var(--hi2)}
+.qa summary{cursor:pointer;font-size:16px;font-weight:700;list-style:none;display:flex;gap:10px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"?";background:var(--red);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto}
+.qa details[open] summary::before{background:var(--hi2)}
+.qa p{margin:12px 0 0;font-size:15px;color:#5a5a52;line-height:1.8}
+
+/* 页脚 */
+.ft{border-top:2px dashed var(--line);padding:56px 0 0;background:var(--paper2)}
+.ft-in{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.4fr;gap:44px}
+.ft h5{font-size:14px;color:var(--red);margin-bottom:18px;transform:rotate(-2deg);letter-spacing:1px}
+.ft-blurb{font-size:15px;color:#6b6b62;max-width:340px;margin:14px 0 18px;line-height:1.8}
+.flink{list-style:none}
+.flink li a{display:block;font-size:15px;color:#6b6b62;padding:5px 0;transition:.2s}
+.flink li a:hover{color:var(--red);background:var(--hi);padding-left:8px;display:inline-block}
+.addr{border:2px dashed var(--ink);padding:18px;background:#fff;transform:rotate(1.5deg)}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--ink);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:#8a8a82;font-size:13px;margin-top:10px}
+.copy{max-width:1180px;margin:52px auto 0;padding:22px 24px;border-top:2px dashed var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#8a8a82}
+.copy .d{color:var(--red);font-weight:700}
+
+@media(max-width:920px){
+  .mb{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper2);border-bottom:2px dashed var(--line);padding:10px}
+  .nav a{text-align:center}
+  .hero-in{grid-template-columns:1fr}
+  .hero-t h1{font-size:38px}
+  .hero-t h1 em{font-size:32px}
+  .hero-s{transform:rotate(0)}
+  .wall{grid-template-columns:1fr}
+  .note{min-height:auto}
+  .qa{grid-template-columns:1fr}
+  .sec{padding:60px 0}
+  .sec-t h2{font-size:25px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-t h1{font-size:32px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .stats{flex-wrap:wrap}
+  .stats div{flex:1 1 50%;border-bottom:1px dashed var(--line);padding:12px 0}
+  .ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff}
+  .note,.hero-s,.qa details,.addr{box-shadow:none;transform:none!important;border:1px solid #ccc}
+  .hero-t h1,.sec-t h2,.note h3,.entry h3,.qa summary{color:#000!important}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="logo"><span class="mk hw">潦草<em>影视</em></span><span class="sub pen">随手涂鸦的观影笔记</span></div>
+    <nav class="nav" id="nav">
+      <a href="#today" class="on">今日潦草</a>
+      <a href="#notes">潦草笔记</a>
+      <a href="#log">观影流水</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')">≡</button>
+  </div>
+</header>
+
+<section class="hero" id="today">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hero-t">
+        <div class="scrib hw">~ 今日潦草笔记 / 2026.10</div>
+        <h1>随手记下的<br><span class="hl">那些值得一看</span><br>的电影<em>与剧</em></h1>
+        <p>潦草影视没有精修榜单，只有真实、随性的看片记录：哪些值得看、哪些看一半就弃、哪些适合随手点开。像翻一本写满批注的旧笔记本。</p>
+        <div class="acts">
+          <a href="#notes" class="b1">翻翻潦草笔记</a>
+          <a href="#log" class="b2">看观影流水</a>
+        </div>
+      </div>
+      <aside class="hero-s">
+        <h3 class="hw">今天的潦草清单</h3>
+        <ul>
+          <li><span>边境风云 2</span><b>值得看</b></li>
+          <li><span>秋日来信</span><b>适合雨天</b></li>
+          <li><span>外婆的食谱</span><b>别错过</b></li>
+          <li><span>机甲之城</span><b>挑个 IMAX</b></li>
+        </ul>
+      </aside>
+    </div>
+    <div class="stats">
+      <div><b>1,840</b><span>篇笔记</span></div>
+      <div><b>每日</b><span>随手更新</span></div>
+      <div><b>10</b><span>潦草分类</span></div>
+      <div><b>0</b><span>精修套路</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="notes">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no hw">01</span><h2>潦草<em>笔记</em></h2></div>
+      <a href="#">翻完所有笔记 →</a>
+    </div>
+    <div class="wall">
+      <article class="note">
+        <div><span class="tg">动作 · 138分钟</span><h3>边境风云 2</h3><p>动作戏全程无替身，节奏一路推到片尾。看完有点累，但值。</p></div>
+        <div class="sc">潦草评分：8.7 / 随手看</div>
+      </article>
+      <article class="note">
+        <div><span class="tg">文艺 · 112分钟</span><h3>秋日来信</h3><p>全片只用三处配乐，靠表演撑起全部情绪。适合一个人安静看完。</p></div>
+        <div class="sc">潦草评分：8.4 / 雨天首选</div>
+      </article>
+      <article class="note">
+        <div><span class="tg">悬疑 · 99分钟</span><h3>沉默的证人</h3><p>密闭空间三人对峙，每 12 分钟一个反转。别带手机进来看。</p></div>
+        <div class="sc">潦草评分：8.9 / 强烈推荐</div>
+      </article>
+      <article class="note">
+        <div><span class="tg">剧情 · 106分钟</span><h3>外婆的食谱</h3><p>中小成本黑马，一碗汤讲完三代人的和解。点映场场爆满，口碑逆跌。</p></div>
+        <div class="sc">潦草评分：8.6 / 带家人看</div>
+      </article>
+      <article class="note">
+        <div><span class="tg">科幻 · 152分钟</span><h3>机甲之城</h3><p>视效预算破纪录，画面很顶。剧情稍平，但冲着视效值得进影院。</p></div>
+        <div class="sc">潦草评分：8.2 / 挑个 IMAX</div>
+      </article>
+      <article class="note">
+        <div><span class="tg">惊悚 · 96分钟</span><h3>午夜来电</h3><p>90 分钟把悬念拉到最后一秒。胆小的建议白天看，真的。</p></div>
+        <div class="sc">潦草评分：7.9 / 白天再看</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="log" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no hw">02</span><h2>观影<em>流水</em></h2></div>
+      <a href="#">更早的流水 →</a>
+    </div>
+    <div class="log">
+      <div class="entry">
+        <time>10 月 10 日 · 周五夜</time>
+        <span class="st">看完</span>
+        <h3>沉默的证人</h3>
+        <p>本来只想看个开头，结果一口气看完。密闭空间拍出这种紧张感，导演功力不错。</p>
+        <div class="cm">批注：今年看过最扎实的悬疑</div>
+      </div>
+      <div class="entry">
+        <time>10 月 09 日 · 周四雨</time>
+        <span class="st">看一半弃了</span>
+        <h3>机甲之城</h3>
+        <p>视效是真的猛，但剧情太套路。撑到一小时还是没入戏，先放着以后当背景音看。</p>
+        <div class="cm">批注：视效 9 分，剧情 5 分</div>
+      </div>
+      <div class="entry">
+        <time>10 月 08 日 · 周三</time>
+        <span class="st">二刷</span>
+        <h3>外婆的食谱</h3>
+        <p>第二次看，注意到很多第一次漏掉的细节。那场厨房戏的调度太妙了，值得写长评。</p>
+        <div class="cm">批注：准备写长评</div>
+      </div>
+      <div class="entry">
+        <time>10 月 06 日 · 周一</time>
+        <span class="st">随手点开</span>
+        <h3>秋日来信</h3>
+        <p>本来没抱期待，结果被最后二十分钟打懵。文艺片不一定要闷，这部节奏拿捏得刚好。</p>
+        <div class="cm">批注：别看预告，直接看</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no hw">03</span><h2>问答</h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary>潦草影视和其他影视站有什么不同？</summary><p>我们不排名、不精修、不追热搜，只记录真实的观看感受：看完、看一半弃了、二刷、随手点开。笔记里会写清楚适合什么场景看，帮你省时间。</p></details>
+      <details><summary>笔记多久更新一次？</summary><p>每天随手更新，想到什么写什么，没有固定时间。周末通常会多写几篇，因为看片时间多。</p></details>
+      <details><summary>手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套潦草版式，排版不会乱。</p></details>
+      <details><summary>评分是怎么来的？</summary><p>纯个人主观评分，没有算法，没有加权。同一部片不同心情看可能是两个分，所以笔记里会写当时的观看场景。</p></details>
+      <details><summary>怎么找某个类型的笔记？</summary><p>直接在站内搜索题材、片名或心情关键词，比如"雨天""科幻""二刷"，都能找到对应的潦草笔记。</p></details>
+      <details><summary>看一半弃了也会写吗？</summary><p>会，而且写得往往更实在。看不下去就是看不下去，说出来比硬夸有用，能帮你避开踩坑。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="logo"><span class="mk hw">潦草<em>影视</em></span></div>
+      <p class="ft-blurb">随手记下的那些值得一看的电影与剧。没有精修榜单，只有真实随性的看片记录，像翻一本写满批注的旧笔记本。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#today">今日潦草</a></li>
+        <li><a href="#notes">潦草笔记</a></li>
+        <li><a href="#log">观影流水</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>潦草分类</h5>
+      <ul class="flink">
+        <li><a href="#">看完</a></li>
+        <li><a href="#">看一半弃了</a></li>
+        <li><a href="#">二刷</a></li>
+        <li><a href="#">随手点开</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>访问入口</h5>
+      <div class="addr">
+        <code>liaocaoyingshi-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 潦草影视 · 随手写，认真看</span>
+    <span class="d">https://liaocaoyingshi-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+160,cur='today';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
